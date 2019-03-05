@@ -1,3 +1,13 @@
-span{
-    display: inline-block;
+.hobbies
+{
+	dislay:grid;
+	height: 100%;
+}
+
+.hobby
+{
+	background-color: red;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
