@@ -1,4 +1,4 @@
-body {
+/*body {
     margin: 60px auto;
     width: 70%;
 }
@@ -41,3 +41,15 @@ ul.posts {
 ul.posts li {
     list-style: none;
 }
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding: 0;
+    opacity: 0.5;
+}*/
