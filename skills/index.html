@@ -5,72 +5,105 @@ title: Skills
 <html>
 	<section class="jumbotron text-center" style="background:transparent !important">
 		<h1>My Skills</h1>
-		<p>I am a student at the Faculty of Informatics and Information Technologies that belongs to Slovak University of Technology in Bratislava where i study computer science. I am currently in the third year so I will finish my bachelor's degree this year.
-				We have many projects at the faculty. Some of them can be viewed in the  section.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et laoreet ligula. Fusce mattis laoreet magna, vel efficitur ligula pulvinar a. In augue nibh, imperdiet nec neque ac, molestie rhoncus enim. Donec blandit odio ante, et venenatis massa tristique ut.</p>
 	</section>
 
 	<section class="jumbotron align-items-center text-center">
-		<div style="margin-top:15px;margin-bottom:18px;border:2px solid #f1f1f1;border-radius:2px;padding:25px;">
-			<ul style="margin: 19px 0px 18px; visibility: visible;" class="nav nav-tabs test2 align-items-center">
-				
-	            <div class="btn-group">
-		            <li class="active"><a data-toggle="tab" href="#home">Beginner</a></li>
-	  				<li><a data-toggle="tab" href="#menu1">Advanced</a></li>
+		<div>
+			<ul class="nav nav-tabs test2 align-items-center">
+				<div class="mx-auto d-sm-flex d-block flex-sm-nowrap">
+		            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+		            	<label class="btn btn-secondary active" data-toggle="tab" href="#advanced">
+					    	<input type="radio" name="options" id="Advanced" autocomplete="off" checked=""> Advanced
+					  	</label>
+					  	<label class="btn btn-secondary" data-toggle="tab" href="#beginner">
+    						<input type="radio" name="options" id="Beginner" autocomplete="off"> Beginner
+  						</label>
+		  			</div>
+
+
+		  			<!--<div class="btn-group btn-group-toggle">
+		  				<li class="nav-item"><a data-toggle="tab" href="#prog_lang">Programming Language</a></li>
+		  				<li class="nav-item"><a data-toggle="tab" href="#technology">Technology</a></li>
+		  				<li class="nav-item"><a data-toggle="tab" href="#dat_sys">Database system</a></li>
+	  				</div>-->
 	  			</div>
-	  			<div class="btn-group">
-	  				<li><a data-toggle="tab" href="#menu2">Programming Language</a></li>
-	  				<li><a data-toggle="tab" href="#menu1">Technology</a></li>
-	  				<li><a data-toggle="tab" href="#menu2">Database system</a></li>
-  				</div>
 			</ul>
+			<div class="row mb-3">
+		      			<div class="col-md-3 themed-grid-col"><strong>Name</strong></div>
+					    <div class="col-md-6 themed-grid-col"><strong>Level of skill</strong></div>
+					    <div class="col-md-3 themed-grid-col"><strong>Type of skill</strong></div>
+		    </div>
 		</div>
 
 		<div class="tab-content">
-		    <div id="home" class="tab-pane fade active in">
-		      	<h3>HOME</h3>
-		      	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-		    </div>
-		    <div id="menu1" class="tab-pane fade">
-		      	<h3>Menu 1</h3>
-		      	<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-		    </div>
-		    <div id="menu2" class="tab-pane fade">
-		      	<h3>Menu 2</h3>
-		      	<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-		    </div>
-		    <div id="menu3" class="tab-pane fade">
-		      	<h3>Menu 3</h3>
-		      	<p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-		    </div>
-		</div>
-	</section>
-
-		<section class="jumbotron text-center">
-			<div class="justify-content-between align-items-center">
-	            <div class="btn-group">
-	                <button type="button" class="btn btn-sm btn-outline-secondary">Beginner</button>
-	                <button type="button" class="btn btn-sm btn-outline-secondary">Advanced</button>
-	            </div>
-
-	            <div class="btn-group">
-	                <button type="button" class="btn btn-sm btn-outline-secondary">Programming Language</button>
-	                <button type="button" class="btn btn-sm btn-outline-secondary">Technology</button>
-	                <button type="button" class="btn btn-sm btn-outline-secondary">Database system</button>
-	            </div>
-	        </div>
-	        <h6></h6>
-	        <div class="container text-center">
-				{% for skill in site.skills %}
+		    <div id="advanced" class="tab-pane fade active show">
+		      	<div class="container text-center">
+					{% for skill in site.skills %}
+					{% if skill.level == 'advanced' %}
 					<div class="row mb-3">
 					    	<div class="col-md-3 themed-grid-col">{{skill.name}}</div>
 					    	<div class="col-md-6 themed-grid-col">{{skill.level}}</div>
 					    	<div class="col-md-3 themed-grid-col">{{skill.describe}}</div>
 			  		</div>
-		  		{% endfor %}
-	  		</div>
-	</section>
-
-		
+			  		{% endif %}
+			  		{% endfor %}
+  				</div>
+		    </div>
+		    <div id="beginner" class="tab-pane fade">
+				<div class="container text-center">
+					{% for skill in site.skills %}
+						{% if skill.level == 'beginner' %}
+							<div class="row mb-3">
+							    	<div class="col-md-3 themed-grid-col">{{skill.name}}</div>
+							    	<div class="col-md-6 themed-grid-col">{{skill.level}}</div>
+							    	<div class="col-md-3 themed-grid-col">{{skill.describe}}</div>
+					  		</div>
+				  		{% endif %}
+			  		{% endfor %}
+  				</div>
+		    </div>
+		    <!--<div id="prog_lang" class="tab-pane fade">
+		      	<div class="container text-center">
+					{% for skill in site.skills %}
+						{% if skill.describe == 'programming language' %}
+							<div class="row mb-3">
+							    	<div class="col-md-3 themed-grid-col">{{skill.name}}</div>
+							    	<div class="col-md-6 themed-grid-col">{{skill.level}}</div>
+							    	<div class="col-md-3 themed-grid-col">{{skill.describe}}</div>
+					  		</div>
+				  		{% endif %}
+			  		{% endfor %}
+  				</div>
+		    </div>
+		    <div id="technology" class="tab-pane fade">
+		      	<div class="container text-center">
+					{% for skill in site.skills %}
+						{% if skill.describe == 'technology' %}
+							<div class="row mb-3">
+							    	<div class="col-md-3 themed-grid-col">{{skill.name}}</div>
+							    	<div class="col-md-6 themed-grid-col">{{skill.level}}</div>
+							    	<div class="col-md-3 themed-grid-col">{{skill.describe}}</div>
+					  		</div>
+				  		{% endif %}
+			  		{% endfor %}
+  				</div>
+		    </div>
+		    <div id="dat_sys" class="tab-pane fade">
+		      	<div class="container text-center">
+					{% for skill in site.skills %}
+						{% if skill.describe == 'database system' %}
+							<div class="row mb-3">
+							    	<div class="col-md-3 themed-grid-col">{{skill.name}}</div>
+							    	<div class="col-md-6 themed-grid-col">{{skill.level}}</div>
+							    	<div class="col-md-3 themed-grid-col">{{skill.describe}}</div>
+					  		</div>
+				  		{% endif %}
+			  		{% endfor %}
+  				</div>
+		    </div>-->
+		</div>
+	</section>	
 </html>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
