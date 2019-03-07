@@ -6,10 +6,49 @@ title: Skills
 	<section class="jumbotron text-center" style="background:transparent !important">
 		<h1>My Skills</h1>
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et laoreet ligula. Fusce mattis laoreet magna, vel efficitur ligula pulvinar a. In augue nibh, imperdiet nec neque ac, molestie rhoncus enim. Donec blandit odio ante, et venenatis massa tristique ut.</p>
+	
+		<div>
+			<div class="row mb-2">
+      			<div class="col-md-6 themed-grid-col"><h3>Education</h3></div>
+			    <div class="col-md-6 themed-grid-col"><h3>Job Experience</h3></div>
+		    </div>
+
+		    <div class="row mb-2">
+		    	<div class="card md-6 box-shadow" style="width: 33.5rem;">
+		      		<img class="card-img-top" src="/images/education.jpg" style="height: 337px; width: 100%; display: block;" data-holder-rendered="true">
+		      		<div class="card-body">
+		        		{% assign skills = site.skills | where:'describe', 'education' %}
+						{% for skill in skills %}
+						<section class="jumbotron text-center" style="background:transparent !important">
+							<br><b>{{skill.name}}</b></br>
+							<br><i>{{skill.level}}</i></br>
+							<br>{{ skill.from | date_to_string }} - {{ skill.to | date_to_string }}</br>
+						</section>
+				  		{% endfor %}
+		        	</div>
+		      	</div>
+		      	<div class="card md-6 box-shadow" style="width: 33.5rem;">
+		      		<img class="card-img-top" src="/images/job-experience.jpg" style="height: 337px; width: 100%; display: block;" data-holder-rendered="true">
+		      		<div class="card-body">
+		        		{% assign skills = site.skills | where:'describe', 'job' %}
+						{% for skill in skills %}
+						<section class="jumbotron text-center" style="background:transparent !important">
+							<br><b>{{skill.name}}</b></br>
+							<br><i>{{skill.level}}</i></br>
+							<br>{{ skill.from | date_to_string }} - {{ skill.to | date_to_string }}</br>
+						</section>
+				  		{% endfor %}
+		        	</div>
+		      	</div>
+		    </div>
+		</div>
 	</section>
 
-	<section class="jumbotron align-items-center text-center">
+	<section class="jumbotron align-items-center text-center" >
 		<div>
+			<h1>IT Skills</h1>
+			<img class="card-img-top" src="/images/programming.jpg" style="height: 430px; width: 100%; display: block;" data-holder-rendered="true">
+			<p></p>
 			<ul class="nav nav-tabs test2 align-items-center">
 				<div class="mx-auto d-sm-flex d-block flex-sm-nowrap">
 		            <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -20,15 +59,9 @@ title: Skills
     						<input type="radio" name="options" id="Beginner" autocomplete="off"> Beginner
   						</label>
 		  			</div>
-
-
-		  			<!--<div class="btn-group btn-group-toggle">
-		  				<li class="nav-item"><a data-toggle="tab" href="#prog_lang">Programming Language</a></li>
-		  				<li class="nav-item"><a data-toggle="tab" href="#technology">Technology</a></li>
-		  				<li class="nav-item"><a data-toggle="tab" href="#dat_sys">Database system</a></li>
-	  				</div>-->
 	  			</div>
 			</ul>
+			<h6></h6>
 			<div class="row mb-3">
 		      			<div class="col-md-3 themed-grid-col"><strong>Name</strong></div>
 					    <div class="col-md-6 themed-grid-col"><strong>Level of skill</strong></div>
@@ -39,69 +72,28 @@ title: Skills
 		<div class="tab-content">
 		    <div id="advanced" class="tab-pane fade active show">
 		      	<div class="container text-center">
-					{% for skill in site.skills %}
-					{% if skill.level == 'advanced' %}
+		      		{% assign skills = site.skills | where:'level', 'advanced' %}
+					{% for skill in skills %}
 					<div class="row mb-3">
 					    	<div class="col-md-3 themed-grid-col">{{skill.name}}</div>
 					    	<div class="col-md-6 themed-grid-col">{{skill.level}}</div>
 					    	<div class="col-md-3 themed-grid-col">{{skill.describe}}</div>
 			  		</div>
-			  		{% endif %}
 			  		{% endfor %}
   				</div>
 		    </div>
 		    <div id="beginner" class="tab-pane fade">
 				<div class="container text-center">
-					{% for skill in site.skills %}
-						{% if skill.level == 'beginner' %}
-							<div class="row mb-3">
-							    	<div class="col-md-3 themed-grid-col">{{skill.name}}</div>
-							    	<div class="col-md-6 themed-grid-col">{{skill.level}}</div>
-							    	<div class="col-md-3 themed-grid-col">{{skill.describe}}</div>
-					  		</div>
-				  		{% endif %}
+					{% assign skills = site.skills | where:'level', 'beginner' %}
+					{% for skill in skills %}
+					<div class="row mb-3">
+					    	<div class="col-md-3 themed-grid-col">{{skill.name}}</div>
+					    	<div class="col-md-6 themed-grid-col">{{skill.level}}</div>
+					    	<div class="col-md-3 themed-grid-col">{{skill.describe}}</div>
+			  		</div>
 			  		{% endfor %}
   				</div>
 		    </div>
-		    <!--<div id="prog_lang" class="tab-pane fade">
-		      	<div class="container text-center">
-					{% for skill in site.skills %}
-						{% if skill.describe == 'programming language' %}
-							<div class="row mb-3">
-							    	<div class="col-md-3 themed-grid-col">{{skill.name}}</div>
-							    	<div class="col-md-6 themed-grid-col">{{skill.level}}</div>
-							    	<div class="col-md-3 themed-grid-col">{{skill.describe}}</div>
-					  		</div>
-				  		{% endif %}
-			  		{% endfor %}
-  				</div>
-		    </div>
-		    <div id="technology" class="tab-pane fade">
-		      	<div class="container text-center">
-					{% for skill in site.skills %}
-						{% if skill.describe == 'technology' %}
-							<div class="row mb-3">
-							    	<div class="col-md-3 themed-grid-col">{{skill.name}}</div>
-							    	<div class="col-md-6 themed-grid-col">{{skill.level}}</div>
-							    	<div class="col-md-3 themed-grid-col">{{skill.describe}}</div>
-					  		</div>
-				  		{% endif %}
-			  		{% endfor %}
-  				</div>
-		    </div>
-		    <div id="dat_sys" class="tab-pane fade">
-		      	<div class="container text-center">
-					{% for skill in site.skills %}
-						{% if skill.describe == 'database system' %}
-							<div class="row mb-3">
-							    	<div class="col-md-3 themed-grid-col">{{skill.name}}</div>
-							    	<div class="col-md-6 themed-grid-col">{{skill.level}}</div>
-							    	<div class="col-md-3 themed-grid-col">{{skill.describe}}</div>
-					  		</div>
-				  		{% endif %}
-			  		{% endfor %}
-  				</div>
-		    </div>-->
 		</div>
 	</section>	
 </html>

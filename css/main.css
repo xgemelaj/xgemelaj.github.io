@@ -53,3 +53,15 @@ hr {
     padding: 0;
     opacity: 0.5;
 }*/
+
+@font-face {
+  font-family: 'NewFont';
+  font-style: normal;
+  font-weight: normal;
+  src: local('NewFont'), url('fonts/Azonix.otf') format('opentype');
+}
+#initial
+{
+    font-family: 'NewFont', sans-serif;
+    font-size: 48px;
+}
