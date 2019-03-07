@@ -4,3 +4,4 @@ permalink: /project/:year/:month/:day/:title
 collections:
   - hobbies
   - skills
+plugins: [jekyll-youtube]

@@ -18,7 +18,8 @@ title: Skills
 		      		<img class="card-img-top" src="/images/education.jpg" style="height: 337px; width: 100%; display: block;" data-holder-rendered="true">
 		      		<div class="card-body">
 		        		{% assign skills = site.skills | where:'describe', 'education' %}
-						{% for skill in skills %}
+		        		{% assign sorted_skills = (skills | sort: 'from') | reverse %}
+						{% for skill in sorted_skills %}
 						<section class="jumbotron text-center" style="background:transparent !important">
 							<br><b>{{skill.name}}</b></br>
 							<br><i>{{skill.level}}</i></br>
@@ -31,7 +32,8 @@ title: Skills
 		      		<img class="card-img-top" src="/images/job-experience.jpg" style="height: 337px; width: 100%; display: block;" data-holder-rendered="true">
 		      		<div class="card-body">
 		        		{% assign skills = site.skills | where:'describe', 'job' %}
-						{% for skill in skills %}
+		        		{% assign sorted_skills = (skills | sort: 'from') | reverse %}
+						{% for skill in sorted_skills %}
 						<section class="jumbotron text-center" style="background:transparent !important">
 							<br><b>{{skill.name}}</b></br>
 							<br><i>{{skill.level}}</i></br>
@@ -53,10 +55,10 @@ title: Skills
 				<div class="mx-auto d-sm-flex d-block flex-sm-nowrap">
 		            <div class="btn-group btn-group-toggle" data-toggle="buttons">
 		            	<label class="btn btn-secondary active" data-toggle="tab" href="#advanced">
-					    	<input type="radio" name="options" id="Advanced" autocomplete="off" checked=""> Advanced
+					    	<input type="radio" name="options" id="radio1" autocomplete="off" checked> Advanced
 					  	</label>
 					  	<label class="btn btn-secondary" data-toggle="tab" href="#beginner">
-    						<input type="radio" name="options" id="Beginner" autocomplete="off"> Beginner
+    						<input type="radio" name="options" id="radio2" autocomplete="off"> Beginner
   						</label>
 		  			</div>
 	  			</div>
