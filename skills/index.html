@@ -3,9 +3,9 @@ layout: default
 title: Skills
 ---
 <html>
-	<section class="jumbotron text-center" style="background:transparent !important">
+	<section id="jumbotron_transparent" class="jumbotron text-center">
 		<h1>My Skills</h1>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et laoreet ligula. Fusce mattis laoreet magna, vel efficitur ligula pulvinar a. In augue nibh, imperdiet nec neque ac, molestie rhoncus enim. Donec blandit odio ante, et venenatis massa tristique ut.</p>
+		<p>Here you can see all the information about my experience. Whether from education and work experience, but at the bottom also IT skills.</p>
 	
 		<div>
 			<div class="row mb-2">
@@ -14,30 +14,32 @@ title: Skills
 		    </div>
 
 		    <div class="row mb-2">
-		    	<div class="card md-6 box-shadow" style="width: 33.5rem;">
-		      		<img class="card-img-top" src="/images/education.jpg" style="height: 337px; width: 100%; display: block;" data-holder-rendered="true">
+		    	<div id="skill_box" class="card md-6 box-shadow">
+		      		<img id="card_skill" class="card-img-top" src="/images/education.jpg" data-holder-rendered="true">
 		      		<div class="card-body">
 		        		{% assign skills = site.skills | where:'describe', 'education' %}
 		        		{% assign sorted_skills = (skills | sort: 'from') | reverse %}
 						{% for skill in sorted_skills %}
-						<section class="jumbotron text-center" style="background:transparent !important">
+						<section id="jumbotron_transparent" class="jumbotron text-center">
 							<br><b>{{skill.name}}</b></br>
 							<br><i>{{skill.level}}</i></br>
 							<br>{{ skill.from | date_to_string }} - {{ skill.to | date_to_string }}</br>
+							<div id="skill_status"><br>{{ skill.status }}</br></div>
 						</section>
 				  		{% endfor %}
 		        	</div>
 		      	</div>
-		      	<div class="card md-6 box-shadow" style="width: 33.5rem;">
-		      		<img class="card-img-top" src="/images/job-experience.jpg" style="height: 337px; width: 100%; display: block;" data-holder-rendered="true">
+		      	<div id="skill_box" class="card md-6 box-shadow">
+		      		<img id="card_skill" class="card-img-top" src="/images/job-experience.jpg" data-holder-rendered="true">
 		      		<div class="card-body">
 		        		{% assign skills = site.skills | where:'describe', 'job' %}
 		        		{% assign sorted_skills = (skills | sort: 'from') | reverse %}
 						{% for skill in sorted_skills %}
-						<section class="jumbotron text-center" style="background:transparent !important">
+						<section id="jumbotron_transparent" class="jumbotron text-center">
 							<br><b>{{skill.name}}</b></br>
 							<br><i>{{skill.level}}</i></br>
 							<br>{{ skill.from | date_to_string }} - {{ skill.to | date_to_string }}</br>
+							<div id="skill_status"><br>{{ skill.status }}</br></div>
 						</section>
 				  		{% endfor %}
 		        	</div>
@@ -49,7 +51,7 @@ title: Skills
 	<section class="jumbotron align-items-center text-center" >
 		<div>
 			<h1>IT Skills</h1>
-			<img class="card-img-top" src="/images/programming.jpg" style="height: 430px; width: 100%; display: block;" data-holder-rendered="true">
+			<img id="skill_it_img" class="card-img-top" src="/images/programming.jpg" data-holder-rendered="true">
 			<p></p>
 			<ul class="nav nav-tabs test2 align-items-center">
 				<div class="mx-auto d-sm-flex d-block flex-sm-nowrap">

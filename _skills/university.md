@@ -4,5 +4,6 @@ describe: education
 level: 'university'
 from: 2016-09-01
 to: now
+status: until now
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pulvinar turpis tellus, ut laoreet lectus pharetra sit amet. Nullam vehicula.

@@ -1,31 +1,22 @@
 ---
-layout: default
+layout: project
 title: My projects
+describe: This section contains all of the larger projects that I created during my studies at the faculty.
 ---
-	<section class="jumbotron text-center" style="background:transparent !important">
-		<h1>{{ page.title }}</h1>
-		<p>This section contains all of the larger projects that I created during my studies at the faculty.</p>
-	</section>
-
-	<section class="jumbotron">
-		<div class="container text-center">
-			<div class="album py-5 ">
-			    <div class="container">
-					<div class="row">
-						{% for post in site.posts %}
-						<div class="col-md-4">
-		      				<div class="card mb-4 box-shadow">
-		      					<img class="card-img-top" src="{{ post.picture_path }}" style="height: 225px; width: 100%; display: block;" data-holder-rendered="true">
-		      					<div class="card-body">
-		        					<span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-		        					<br><b>Subject</b>: <i>{{post.subject}}</i></br>
-									<p>{{ post.description }}</p>
-		        				</div>
-		      				</div>
-		    			</div>
-						{% endfor %}
-			        </div>
-		        </div>
-		    </div>
-		</div>
-	</section>
+	
+<div class="row">
+	{% for post in site.posts %}
+	<div class="col-md-4">
+			<div class="card mb-4 box-shadow">
+				<img id="card_main" class="card-img-top" src="{{ post.picture_path }}" data-holder-rendered="true">
+				<div class="card-body">
+				<span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+				<br><b>Subject</b>: <i>{{post.subject}}</i></br>
+				<p>{{ post.description }}</p>
+			</div>
+			</div>
+	</div>
+	{% endfor %}
+</div>
+		       
+	

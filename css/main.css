@@ -1,59 +1,3 @@
-/*body {
-    margin: 60px auto;
-    width: 70%;
-}
-nav ul, footer ul {
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    padding: 0px;
-    list-style: none;
-    font-weight: bold;
-}
-nav ul li, footer ul li {
-    display: inline;
-    margin-right: 20px;
-}
-a {
-    text-decoration: none;
-    color: #999;
-}
-a:hover {
-    text-decoration: underline;
-}
-h1 {
-    font-size: 3em;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-}
-p {
-    font-size: 1.5em;
-    line-height: 1.4em;
-    color: #333;
-}
-footer {
-    border-top: 1px solid #d5d5d5;
-    font-size: .8em;
-}
-
-ul.posts { 
-    margin: 20px auto 40px; 
-    font-size: 1.5em;
-}
-
-ul.posts li {
-    list-style: none;
-}
-
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    padding: 0;
-    opacity: 0.5;
-}*/
-
 @font-face {
   font-family: 'NewFont';
   font-style: normal;
@@ -64,4 +8,45 @@ hr {
 {
     font-family: 'NewFont', sans-serif;
     font-size: 48px;
+}
+
+#jumbotron_transparent
+{
+    background: none
+}
+
+#card_main
+{
+    height: 225px; 
+    width: 100%; 
+    display: block;
+}
+
+#card_skill
+{
+    height: 337px; 
+    width: 100%; 
+    display: block
+}
+
+#skill_box
+{
+    width: 33.5rem;
+}
+
+#skill_status
+{
+    color: grey;
+}
+
+#skill_it_img
+{
+    height: 430px; 
+    width: 100%; 
+    display: block;
+}
+
+footer
+{
+    text-align: center;
 }

@@ -2,4 +2,5 @@
 name: Traveling
 picture_path: /images/Traveling.jpg
 ---
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pulvinar turpis tellus, ut laoreet lectus pharetra sit amet. Nullam vehicula.
+
+Knowing new places and cultures is very fascinating for me because every culture is different.

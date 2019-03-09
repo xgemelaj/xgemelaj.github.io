@@ -1,34 +1,20 @@
 ---
-layout: default
+layout: project
 title: Web Publishing
+describe: This section contains all projects from subject Web Publishing.
 ---
-	<section class="jumbotron text-center" style="background:transparent !important">
-		<h1>{{ page.title }}</h1>
-		<h5>About subject</h5>
-		<a>The main focus of the subject is XML and related technologies. More specifically: Get knowledge about the life cycle stages of a document, its work with an emphasis on modern markup languages ​​and styles usable in the site environment. Learn how to preserve the author's appearance of the document and how to protect the content of the document. Understand the basics of computer document rates and typography that can also be used for classic paper publishing. Get practical skills in document design and document transformations and in target document formatting in output format.</a>
-	</section>
-
-	<section class="jumbotron">
-		<div class="container text-center">
-			<h4>Projects from subject</h4>
-			<div class="album py-5 ">
-			    <div class="container">
-			    	{% assign posts = site.posts | where:'subject', 'Web Publishing' %}
-					<div class="row">
-						{% for post in posts %}
-						<div class="col-md-4">
-		      				<div class="card mb-4 box-shadow">
-		      					<img class="card-img-top" src="{{ post.picture_path }}" style="height: 225px; width: 100%; display: block;" data-holder-rendered="true">
-		      					<div class="card-body">
-		        					<span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-		        					<br><b>Subject</b>: <i>{{post.subject}}</i></br>
-									<p>{{ post.description }}</p>
-		        				</div>
-		      				</div>
-		    			</div>
-						{% endfor %}
-			        </div>
-		        </div>
-		    </div>
-		</div>
-	</section>
+{% assign posts = site.posts | where:'subject', 'Web Publishing' %}
+<div class="row">
+	{% for post in posts %}
+	<div class="col-md-4">
+			<div class="card mb-4 box-shadow">
+				<img id="card_main" class="card-img-top" src="{{ post.picture_path }}" data-holder-rendered="true">
+				<div class="card-body">
+				<span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+				<br><b>Subject</b>: <i>{{post.subject}}</i></br>
+				<p>{{ post.description }}</p>
+			</div>
+			</div>
+	</div>
+	{% endfor %}
+</div>
