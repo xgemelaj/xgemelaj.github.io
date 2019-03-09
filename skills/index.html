@@ -8,14 +8,13 @@ title: Skills
 		<p>Here you can see all the information about my experience. Whether from education and work experience, but at the bottom also IT skills.</p>
 	
 		<div>
-			<div class="row mb-2">
-      			<div class="col-md-6 themed-grid-col"><h3>Education</h3></div>
-			    <div class="col-md-6 themed-grid-col"><h3>Job Experience</h3></div>
-		    </div>
 
 		    <div class="row mb-2">
+		    	
 		    	<div id="skill_box" class="card md-6 box-shadow">
-		      		<img id="card_skill" class="card-img-top" src="/images/education.jpg" data-holder-rendered="true">
+		    		<img id="card_skill" class="card-img-top" src="/images/education.jpg" data-holder-rendered="true">
+		    		<h5></h5>
+		      		<h3>Education</h3>
 		      		<div class="card-body">
 		        		{% assign skills = site.skills | where:'describe', 'education' %}
 		        		{% assign sorted_skills = (skills | sort: 'from') | reverse %}
@@ -29,8 +28,11 @@ title: Skills
 				  		{% endfor %}
 		        	</div>
 		      	</div>
+		      	
 		      	<div id="skill_box" class="card md-6 box-shadow">
 		      		<img id="card_skill" class="card-img-top" src="/images/job-experience.jpg" data-holder-rendered="true">
+		      		<h5></h5>
+		      		<h3>Job Experience</h3>
 		      		<div class="card-body">
 		        		{% assign skills = site.skills | where:'describe', 'job' %}
 		        		{% assign sorted_skills = (skills | sort: 'from') | reverse %}
