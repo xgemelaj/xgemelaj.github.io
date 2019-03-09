@@ -59,7 +59,7 @@ Výsledok zadania vložte do AISu do 10. 3. 23:59 ako jeden ZIP archív pomenova
 
 ### Plugin
 * V tejto stránke sme využili plugin na zobrazovanie *Youtube* videí:
-	* Konkrétne v podstránke *About me* kde sa zobrazuje pri mojich záľubách moja momentálna najobľúbenejšia pesnička
-	* Tento plugin by mal veľké využitie ak by som ako osoba mal nejaké video ohľadom svojej osoby. Vtedy by sa dal veľmi dobre zakomponovať do sekcie či už úvodnej stránky alebo informácii o mne.
+	* Konkrétne v podstránke *About me* kde sa zobrazuje pri mojich záľubách zobrazuje vtipné video ktoré dopĺňa infromáciu o tom že som programátor.
+	* Tento plugin by mal rovnako veľké využitie ak by som ako osoba mal nejaké video ohľadom svojej osoby. Vtedy by sa dal veľmi dobre zakomponovať do sekcie či už úvodnej stránky alebo informácii o mne.
 
 * Inštalácia pluginu - jediné čo je potrebné je zadať do konzoly: *gem install jekyll-youtube*
