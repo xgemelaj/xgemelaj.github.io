@@ -63,3 +63,6 @@ Výsledok zadania vložte do AISu do 10. 3. 23:59 ako jeden ZIP archív pomenova
 	* Tento plugin by mal rovnako veľké využitie ak by som ako osoba mal nejaké video ohľadom svojej osoby. Vtedy by sa dal veľmi dobre zakomponovať do sekcie či už úvodnej stránky alebo informácii o mne.
 
 * Inštalácia pluginu - jediné čo je potrebné je zadať do konzoly: *gem install jekyll-youtube*
+
+### Štýly
+* Na vytvorenie tejto stránky som použil **Bootstrap** ktorý som následne podľa potreby upravoval pomocou **CSS** ktoré sa nachádza v priečinku *css* s názvom *main.css*. Žiadny template ani predom vytvorený koncept nebol použitý a stránku som postupne vytvoril sám s pomocou bootstrap tutorialov.

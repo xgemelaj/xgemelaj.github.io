@@ -2,44 +2,39 @@
 layout: default
 title: About
 ---
-<html>
-	<section id="jumbotron_transparent" class="jumbotron text-center">
-		
-			<h1>About me</h1>
-			<p>I am a student at the Faculty of Informatics and Information Technologies that belongs to Slovak University of Technology in Bratislava where i study computer science. I am currently in the third year so I will finish my bachelor's degree this year.
-				We have many projects at the faculty. Some of them can be viewed in the <a href="/projects">Projects</a> section.</p>
-		
-	</section>
+<section id="jumbotron_transparent" class="jumbotron text-center">
+	
+		<h1>About me</h1>
+		<p>I am a student at the Faculty of Informatics and Information Technologies that belongs to Slovak University of Technology in Bratislava where i study computer science. I am currently in the third year so I will finish my bachelor's degree this year.
+			We have many projects at the faculty. Some of them can be viewed in the <a href="/projects">Projects</a> section.</p>
+	
+</section>
 
-	<section class="jumbotron">
-	    <div class="container text-center">
-			<h2>Hobbies</h2>
-			<div class="album py-5 ">
-			    <div class="container">
-					<div class="row">
-						{% for hobby in site.hobbies %}	  
-			            <div class="col-md-4">
-			              	<div class="card mb-4 box-shadow">
-			              		<img id="card_main" class="card-img-top" src="{{hobby.picture_path}}" alt="{{hobby.name}}" data-holder-rendered="true">
-			                	<div class="card-body">
-			                		<h2>{{hobby.name}}</h2>
-			                  		<p class="card-text">{{hobby.content}}</p>
-			                	</div>
-			              	</div>
-			            </div>
-			            {% endfor %}
-			        </div>
+<section class="jumbotron">
+    <div class="container text-center">
+		<h2>Hobbies</h2>
+		<div class="album py-5 ">
+		    <div class="container">
+				<div class="row">
+					{% for hobby in site.hobbies %}	  
+		            <div class="col-md-4">
+		              	<div class="card mb-4 box-shadow">
+		              		<img id="card_main" class="card-img-top" src="{{hobby.picture_path}}" alt="{{hobby.name}}" data-holder-rendered="true">
+		                	<div class="card-body">
+		                		<h2>{{hobby.name}}</h2>
+		                  		<p class="card-text">{{hobby.content}}</p>
+		                	</div>
+		              	</div>
+		            </div>
+		            {% endfor %}
 		        </div>
-		    </div>
-		</div>
-	</section>
+	        </div>
+	    </div>
+	</div>
+</section>
 
-	<section id="jumbotron_transparent" class="jumbotron text-center">
-		<h2>I am also programmer</h2>
-		<br><b><i>This video shows what, in most cases, is the role of the programmer :)</i></b></br>
-		{% youtube "https://www.youtube.com/watch?v=_Nua3Cjdik0" %}
-	</section>
-</html>
+
+
 
 
 
