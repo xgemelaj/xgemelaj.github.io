@@ -4,7 +4,7 @@ subject: "Web Publishing"
 title: "DocBook"
 picture_path: /images/docbook.png
 description: "Transformácia vybraného dokumentu do formátu DocBook."
-date: 2019-03-08
+date: 2019-03-14
 ---
 
 ## Zadanie 

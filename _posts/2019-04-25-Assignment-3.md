@@ -4,7 +4,7 @@ subject: "Web Publishing"
 title: "XML prezentácia"
 picture_path: /images/question-mark.png
 description: "Vytvorenie XML prezentácie a transformácia do HTML a PDF."
-date: 2019-03-08
+date: 2019-04-25
 ---
 
 ## Zadanie 
